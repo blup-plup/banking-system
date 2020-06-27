@@ -1,14 +1,11 @@
-package com.blupplup.bank.Daos.Impl;
+package com.blupplup.bank.daos.Impl;
 
-import com.blupplup.bank.Daos.AccountDao;
+import com.blupplup.bank.daos.AccountDao;
 import com.blupplup.bank.models.Account;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
-
-import javax.persistence.EntityManager;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;

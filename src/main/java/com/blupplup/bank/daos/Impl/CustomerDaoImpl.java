@@ -1,28 +1,29 @@
-package com.blupplup.bank.Daos.Impl;
+package com.blupplup.bank.daos.Impl;
 
-import com.blupplup.bank.Daos.AccountTypeDao;
-import com.blupplup.bank.models.AccountType;
+import com.blupplup.bank.daos.CustomerDao;
+import com.blupplup.bank.models.Customer;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
 
 @Repository
-public class AccountTypeDaoImpl implements AccountTypeDao {
+public class CustomerDaoImpl implements CustomerDao {
+
 
     @Autowired
     SessionFactory sessionFactory;
 
+
     @Override
-    public List<AccountType> getAllAccountTypes() {
+    public List<Customer> getAllCustomers() {
         Session session = sessionFactory.getCurrentSession();
         CriteriaBuilder criteriaBuilder = session.getCriteriaBuilder();
 
-        CriteriaQuery<AccountType> criteriaQuery = criteriaBuilder.createQuery(AccountType.class);
+        CriteriaQuery<Customer> criteriaQuery = criteriaBuilder.createQuery(Customer.class);
 
         return session.createQuery(criteriaQuery).getResultList();
     }
