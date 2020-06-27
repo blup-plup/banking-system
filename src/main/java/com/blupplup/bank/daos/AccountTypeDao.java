@@ -1,4 +1,4 @@
-package com.blupplup.bank.Daos;
+package com.blupplup.bank.daos;
 
 import com.blupplup.bank.models.AccountType;
 
